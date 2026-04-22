@@ -9,26 +9,32 @@
 </head>
 
 <body>
-    <h2>Login</h2>
-    <div class="card-login">
+
+    <h2>Cadastro</h2>
+    <div class="card-cadastro">
 
         <div class="inserir-nome">
-            <input type="text" id="ipt_nome">
-            <label for="">Insira seu nome completo</label>
+            <input type="text" id="ipt_nome" oninput="Nome()">
+            <label for="ipt_nome">Insira seu nome completo</label>
+            <span id="spn_nome"></span>
         </div>
         <div class="inseir-email">
-            <input type="text" id="ipt_email">
+            <input type="text" id="ipt_email" oninput="Email()">
             <label for="">Insira seu email</label>
+            <span id="spn_email"></span>
         </div>
         <div class="inserir-senha">
-            <input type="text" id="ipt_senha">
+            <input type="text" id="ipt_senha" oninput="">
             <label for="">Insira sua senha desejada</label>
+            <span id="spn_senha"></span>
         </div>
         <div class="inserir-senha-confirmacao">
-            <input type="text" id="ipt_senha">
+            <input type="text" id="ipt_confirmacaoSenha" oninput="">
             <label for="">Insira sua senha novamente</label>
+            <span id="spn_confirmacao_senha"></span>
         </div>
-        <button onclick="">Entrar</button>
+        <button onclick="cadastrar()">Entrar</button>
+        <span id="spn_cadastrar"></span>
     </div>
 
 </body>
