@@ -1,3 +1,7 @@
 body{
     background-image: url(../IMG/Fundo.jpeg);
+    margin-top: -20px;
+}
+.card-cadastro{
+    background-image: url(../IMG/Papel-envelhecido.png);
 }
