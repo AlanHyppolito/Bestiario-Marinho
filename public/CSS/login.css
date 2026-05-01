@@ -1,9 +1,110 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+body {
     background-image: url(../IMG/Fundo.jpeg);
+    background-repeat: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Jim Nightshade', cursive;
+    color: rgba(50, 32, 24, 0.9);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.35);
 }
-.card-login{
+
+.titulo {
+    font-size: 108px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.card-login {
     background-image: url(../IMG/Papel-envelhecido.png);
+    background-repeat: 0;
+    background-size: cover;
+    width: 689px;
+    height: 1035px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
-.botao{
+
+.insert-email,
+.insert-senha {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.insert-email input,
+.insert-senha input {
+    width: 350px;
+    padding-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2.5px solid rgba(50, 32, 24, 0.355);
+    outline: none;
+    color: inherit;
+    font-size: 25px;
+}
+
+.insert-email label,
+.insert-senha label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-size: 25px;
+    color: rgba(50, 32, 24, 0.9);
+    transition: 0.3s;
+
+}
+
+.insert-email input:focus+label,
+.insert-email input:valid+label {
+    top: -15px;
+    left: -3px;
+    font-size: 20px;
+}
+
+.insert-senha input:focus+label,
+.insert-senha input:valid+label {
+    top: -15px;
+    left: -3px;
+    font-size: 20px;
+}
+
+.botao {
     background-image: url(../IMG/Botão-de-entrar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
+    width: 286px;
+    height: 74px;
+    margin-top: 40px;
+    margin-right: 20px;
+    border: none;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botao:hover {
+    transform: scale(0.95);
+    filter: brightness(1.1);
+}
+
+.botao:active {
+    transform: scale(0.90);
+    filter: brightness(0.9);
+}
+
+.teste {
+    margin-right: 20px;
 }

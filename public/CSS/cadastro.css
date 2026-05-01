@@ -1,7 +1,27 @@
-body{
+body {
     background-image: url(../IMG/Fundo.jpeg);
-    margin-top: -20px;
+    background-repeat: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Jim Nightshade', cursive;
+    color: rgba(50, 32, 24, 0.9);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
 }
-.card-cadastro{
+
+.card-cadastro {
     background-image: url(../IMG/Papel-envelhecido.png);
+    background-repeat: 0;
+    background-size: cover;
+    width: 689px;
+    height: 1035px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
