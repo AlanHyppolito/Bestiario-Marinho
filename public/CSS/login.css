@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
 body {
     background-image: url(../IMG/Fundo.jpeg);
     background-repeat: 0;
@@ -16,14 +17,9 @@ body {
     transform: scale(1.35);
 }
 
-.titulo {
-    font-size: 108px;
-    padding-right: 20px;
-    padding-top: 10px;
-}
-
-.card-login {
-    background-image: url(../IMG/Papel-envelhecido.png);
+.card {
+    background-image: url(../IMG/Papel-envelhecido-mordido.png
+    );
     background-repeat: 0;
     background-size: cover;
     width: 689px;
@@ -31,9 +27,28 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 
+.titulo {
+    font-size: 108px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.insert-senha, .insert-email{
+    flex-direction: row;
+    display: flex;
+}
+
+.chave, .ancora{
+    width: 25px;
+    margin-left: -30px;
+    margin-bottom: -27px;
+}
+
+.input{
+    margin-top: -80px;
+}
 .insert-email,
 .insert-senha {
     position: relative;
@@ -60,7 +75,6 @@ body {
     font-size: 25px;
     color: rgba(50, 32, 24, 0.9);
     transition: 0.3s;
-
 }
 
 .insert-email input:focus+label,
@@ -77,6 +91,7 @@ body {
     font-size: 20px;
 }
 
+
 .botao {
     background-image: url(../IMG/Botão-de-entrar.png);
     background-size: cover;
@@ -84,8 +99,8 @@ body {
     background-position: center;
     background-color: transparent;
 
-    width: 286px;
-    height: 74px;
+    width: 302px;
+    height: 78px;
     margin-top: 40px;
     margin-right: 20px;
     border: none;
@@ -105,6 +120,8 @@ body {
     filter: brightness(0.9);
 }
 
-.teste {
+.link {
+    font-size: 25px;
+    margin-top: 5px;
     margin-right: 20px;
 }

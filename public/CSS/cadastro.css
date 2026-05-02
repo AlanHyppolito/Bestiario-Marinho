@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
 body {
     background-image: url(../IMG/Fundo.jpeg);
     background-repeat: 0;
@@ -12,9 +14,10 @@ body {
     font-family: 'Jim Nightshade', cursive;
     color: rgba(50, 32, 24, 0.9);
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.35);
 }
 
-.card-cadastro {
+.card {
     background-image: url(../IMG/Papel-envelhecido.png);
     background-repeat: 0;
     background-size: cover;
@@ -23,5 +26,124 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+}
+
+.titulo {
+    font-size: 108px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.ajuste{
+    flex-direction: row;
+    display: flex;
+}
+.imagem {
+    width: 25px;
+    margin-left: -30px;
+    margin-bottom: -27px;
+}
+
+.input {
+    margin-top: -120px;
+}
+
+.insert-nome,
+.insert-email,
+.insert-senha,
+.insert-senha-confirmacao {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.insert-nome input,
+.insert-email input,
+.insert-senha input,
+.insert-senha-confirmacao input {
+    width: 350px;
+    padding-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2.5px solid rgba(50, 32, 24, 0.355);
+    outline: none;
+    color: inherit;
+    font-size: 30px;
+}
+
+.insert-nome label,
+.insert-email label,
+.insert-senha label,
+.insert-senha-confirmacao label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    font-size: 25px;
+    color: rgba(50, 32, 24, 0.9);
+    transition: 0.3s;
+}
+
+.insert-nome input:focus+label,
+.insert-nome input:valid+label {
+    top: -15px;
+    left: -3px;
+    font-size: 25px;
+}
+
+.insert-email input:focus+label,
+.insert-email input:valid+label {
+    top: -15px;
+    left: -3px;
+    font-size: 25px;
+}
+
+.insert-senha input:focus+label,
+.insert-senha input:valid+label {
+    top: -15px;
+    left: -3px;
+    font-size: 25px;
+}
+
+.insert-senha-confirmacao input:focus+label,
+.insert-senha-confirmacao input:valid+label {
+    top: -15px;
+    left: -3px;
+    font-size: 25px;
+}
+
+.span {
+    color: rgb(165, 2, 2);
+    height: 25px;
+    margin-top: 2px;
+}
+
+.botao {
+    background-image: url(../IMG/Botão-de-cadastro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
+    width: 302px;
+    height: 80px;
+    margin-right: 20px;
+    border: none;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botao:hover {
+    transform: scale(0.95);
+    filter: brightness(1.1);
+}
+
+.botao:active {
+    transform: scale(0.90);
+    filter: brightness(0.9);
+}
+
+.link {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-right: 20px;
 }

@@ -9,34 +9,73 @@
 </head>
 
 <body>
-    <div class="titulo">
-        <h2>Cadastro</h2>
-    </div>
-    <div class="card-cadastro">
-
-        <div class="inserir-nome">
-            <input type="text" id="ipt_nome" required oninput="Nome()">
-            <label for="ipt_nome">Insira seu nome completo</label>
-            <span id="spn_nome"></span>
+    <div class="card">
+        <div class="titulo">
+            <h2>Cadastro</h2>
         </div>
-        <div class="inseir-email">
-            <input type="text" id="ipt_email" required oninput="Email()">
-            <label for="">Insira seu email</label>
-            <span id="spn_email"></span>
+        <div class="input">
+            <div class="insert-nome">
+                <div class="ajuste">
+                <div>
+                    <img class="imagem" src="../IMG/Chapel.png" alt="">
+                </div>
+                <div>
+                    <input type="text" id="ipt_nome" required oninput="Nome()">
+                    <label for="ipt_nome">Insira seu nome completo</label>
+                    </div>
+                </div>
+                <div class="span">
+                    <span id="spn_nome"></span>
+                </div>
+            </div>
+            <div class="insert-email">
+                <div class="ajuste">
+                <div>
+                    <img class="imagem" src="../IMG/Ancora.png" alt="">
+                </div>
+                <div>
+                    <input type="text" id="ipt_email" required oninput="Email()">
+                    <label for="">Insira seu email</label>
+                    </div>
+                </div>
+                <div class="span">
+                    <span id="spn_email"></span>
+                </div>
+            </div>
+            <div class="insert-senha">
+                <div class="ajuste">
+                <div>
+                    <img class="imagem" src="../IMG/Chave.png" alt="">
+                </div>
+                <div>
+                    <input type="text" id="ipt_senha" required oninput="Senha()">
+                    <label for="">Insira sua senha desejada</label>
+                    </div>
+                </div>
+                <div class="span">
+                    <span id="spn_senha"></span>
+                </div>
+            </div>
+            <div class="insert-senha-confirmacao">
+                <div class="ajuste">
+                    <div>
+                        <img class="imagem" src="../IMG/Chave.png" alt="">
+                    </div>
+                    <div>
+                        <input type="text" id="ipt_confirmacaoSenha" required oninput="validação_senha()">
+                        <label for="">Insira sua senha novamente</label>
+                    </div>
+                </div>
+                <div class="span">
+                    <span id="spn_confirmacao_senha"></span>
+                </div>
+            </div>
         </div>
-        <div class="inserir-senha">
-            <input type="text" id="ipt_senha" required oninput="Senha()">
-            <label for="">Insira sua senha desejada</label>
-            <span id="spn_senha"></span>
+        <button class="botao" onclick="cadastrar()">Entrar</button>
+        <div class="link">
+            <span>Ja tem conta? <a href="login.html">Clique aqui!</a></span>
         </div>
-        <div class="inserir-senha-confirmacao">
-            <input type="text" id="ipt_confirmacaoSenha" required oninput="">
-            <label for="">Insira sua senha novamente</label>
-            <span id="spn_confirmacao_senha"></span>
-        </div>
-        <button onclick="cadastrar()">Entrar</button>
-        <span id="spn_cadastrar"></span>
-    </div>
+    </div> 
 
 </body>
 
