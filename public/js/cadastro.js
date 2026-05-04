@@ -11,7 +11,7 @@ function Nome() {
             break;
         }
     }
-    if (email == null || email == "") {
+    if (nome == null || nome == "") {
         spn_nome.innerHTML = " "
     }
 }
