@@ -1,10 +1,11 @@
 let validacao = false;
 function Nome() {
     let nome = ipt_nome.value;
-    let indice_nome = new RegExp("[A-z]");
+    let indice_nome = new RegExp("[A-z- ]");
     for (let i = 0; i < nome.length; i++) {
         if (indice_nome.test(nome[i]) == true) {
             validacao = true;
+            spn_nome.innerHTML = ""
         } else {
             validacao = false;
             spn_nome.innerHTML = "Nome contem caracteres invalidos!";
@@ -26,6 +27,7 @@ function Email() {
 
     if (fim && inicio && vezes_arroba && vezes_ponto_com) {
         validacao = true;
+        spn_email.innerHTML = " "
     } else {
         validacao = false;
         spn_email.innerHTML = "Formato do email invalido!";

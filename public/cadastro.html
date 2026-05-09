@@ -2,91 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="css/cadastro.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="css/cadastro.css">
 </head>
 
 <body>
-    <div class="card">
-        <div class="titulo">
-            <h2>Cadastro</h2>
+  <div class="card">
+    <div class="titulo">
+      <h2>Cadastro</h2>
+    </div>
+    <div class="input">
+      <div class="insert-nome">
+        <div class="ajuste">
+          <div>
+            <img class="imagem" src="assets/IMG/Chapel.png" alt="">
+          </div>
+          <div>
+            <input type="text" id="ipt_nome" required oninput="Nome()">
+            <label for="ipt_nome">Insira seu nome completo</label>
+          </div>
         </div>
-        <div class="input">
-            <div class="insert-nome">
-                <div class="ajuste">
-                <div>
-                    <img class="imagem" src="assets/IMG/Chave.png   " alt="">
-                </div>
-                <div>
-                    <input type="text" id="ipt_nome" required oninput="Nome()">
-                    <label for="ipt_nome">Insira seu nome completo</label>
-                    </div>
-                </div>
-                <div class="span">
-                    <span id="spn_nome"></span>
-                </div>
-            </div>
-            <div class="insert-email">
-                <div class="ajuste">
-                <div>
-                    <img class="imagem" src="assets/IMG/Chave.png" alt="">
-                </div>
-                <div>
-                    <input type="text" id="ipt_email" required oninput="Email()">
-                    <label for="">Insira seu email</label>
-                    </div>
-                </div>
-                <div class="span">
-                    <span id="spn_email"></span>
-                </div>
-            </div>
-            <div class="insert-senha">
-                <div class="ajuste">
-                <div>
-                    <img class="imagem" src="assets/IMG/Chave.png" alt="">
-                </div>
-                <div>
-                    <input type="text" id="ipt_senha" required oninput="Senha()">
-                    <label for="">Insira sua senha desejada</label>
-                    </div>
-                </div>
-                <div class="span">
-                    <span id="spn_senha"></span>
-                </div>
-            </div>
-            <div class="insert-senha-confirmacao">
-                <div class="ajuste">
-                    <div>
-                        <img class="imagem" src="assets/IMG/Chave.png" alt="">
-                    </div>
-                    <div>
-                        <input type="text" id="ipt_confirmacaoSenha" required oninput="validação_senha()">
-                        <label for="">Insira sua senha novamente</label>
-                    </div>
-                </div>
-                <div class="span">
-                    <span id="spn_confirmacao_senha"></span>
-                </div>
-            </div>
+        <div class="span">
+          <span id="spn_nome"></span>
         </div>
-        <button class="botao" onclick="cadastrar()">Entrar</button>
-        <div class="link">
-            <span>Ja tem conta? <a href="login.html">Clique aqui!</a></span>
+      </div>
+      <div class="insert-email">
+        <div class="ajuste">
+          <div>
+            <img class="imagem" src="assets/IMG/Ancora.png" alt="">
+          </div>
+          <div>
+            <input type="text" id="ipt_email" required oninput="Email()">
+            <label for="">Insira seu email</label>
+          </div>
         </div>
-    </div> 
-<div id="mensagem_erro"></div>
-<div id="div_erros_login"></div>
-<div id="div_aguardar"></div>
-<div id="cardErro"></div>
+        <div class="span">
+          <span id="spn_email"></span>
+        </div>
+      </div>
+      <div class="insert-senha">
+        <div class="ajuste">
+          <div>
+            <img class="imagem" src="assets/IMG/Chave.png" alt="">
+          </div>
+          <div>
+            <input type="text" id="ipt_senha" required oninput="Senha()">
+            <label for="">Insira sua senha desejada</label>
+          </div>
+        </div>
+        <div class="span">
+          <span id="spn_senha"></span>
+        </div>
+      </div>
+      <div class="insert-senha-confirmacao">
+        <div class="ajuste">
+          <div>
+            <img class="imagem" src="assets/IMG/Chave.png" alt="">
+          </div>
+          <div>
+            <input type="text" id="ipt_confirmacaoSenha" required oninput="validação_senha()">
+            <label for="">Insira sua senha novamente</label>
+          </div>
+        </div>
+        <div class="span">
+          <span id="spn_confirmacao_senha"></span>
+        </div>
+      </div>
+    </div>
+    <button class="botao" onclick="cadastrar()">Entrar</button>
+    <div class="cadastrar">
+      <div id="mensagem_cadastro"></div>
+    </div>
+    <div class="erro">
+      <div id="mensagem_erro"></div>
+      <div id="div_erros_login"></div>
+      <div id="div_aguardar"></div>
+      <div id="cardErro"></div>
+    </div>
+      <div class="link">
+      <span>Ja tem conta? <a href="login.html">Clique aqui!</a></span>
+    </div>
+  </div>
 </body>
 
 </html>
 <script src="js/cadastro.js"></script>
 
 <script>
-function cadastrar() {
+  function cadastrar() {
     // aguardar();
 
     //Recupere o valor da nova input pelo nome do id
@@ -116,38 +121,30 @@ function cadastrar() {
 
     } else if (nomeVar.length <= 1) {
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Erro no nome. Nome deve ter mais de 1 caracter)";
 
       finalizarAguardar();
       return false;
 
     } else if ((!antes && existe_arroba <= -1) && existe_ponto <= -1) {
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Erro no email. Email deve conter @ e . depois dele)";
 
       finalizarAguardar();
       return false;
 
-    } else if (senhaVar.length <= 6) {
+    } else if (senhaVar.length < 6) {
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Erro na senha. Senha deve ter mais de 6 caracteres)";
 
       finalizarAguardar();
       return false;
 
     } else if (confirmacaoSenhaVar != senhaVar) {
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Erro na confirmação da senha. A confirmação da senha deve ser igual a senha)";
 
       finalizarAguardar();
       return false;
 
     } else {
-      setInterval(sumirMensagem, 5000);
+      sumirMensagem()
     }
 
     // Enviando o valor da nova input
@@ -170,7 +167,7 @@ function cadastrar() {
         if (resposta.ok) {
           cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML =
+          mensagem_cadastro.innerHTML =
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
@@ -190,27 +187,6 @@ function cadastrar() {
 
     return false;
   }
-
-  // Listando empresas cadastradas
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresasCadastradas.push(empresa);
-
-            console.log("listaEmpresasCadastradas")
-            console.log(listaEmpresasCadastradas[0].codigo_ativacao)
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
-
   function sumirMensagem() {
     cardErro.style.display = "none";
   }
