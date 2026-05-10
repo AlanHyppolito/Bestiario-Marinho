@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
+body {
+    background-image: url(../assets/IMG/Fundo-home.png);
+    background-repeat: 0;
+    background-size: cover;
+    background-clip: inherit;
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 30px;
+    color: white;
+    margin-left: 150px;
+
+}
+
+/*header ======================================================*/
+
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-left: -130px;
+    font-size: 50px;
+    box-shadow: blur(3px);
+}
+
+.img-logo {
+    width: 450px;
+}
+
+.ata {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    align-items: center
+}
+
+.atalhos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    margin: 80px;
+    font-size: 45px;
+}
+
+.link {
+    display: flex;
+    justify-content: row;
+    align-items: end;
+    margin-right: 100px;
+}
+
+.log{
+    margin-right: 15px;
+}
+.cad{
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*inicio ======================================================*/
+.in-txt-1 {
+    font-size: 120px;
+    width: 1300px;
+
+}
+
+.in-txt-2 {
+    margin-top: -30px;
+    margin-bottom: 60px;
+    font-size: 52px;
+    width: 800px;
+}
+
+.button {
+    background: linear-gradient(90deg, rgb(0, 77, 77), rgb(0, 165, 165));
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: rgb(100, 185, 185);
+    width: 400px;
+    height: 70px;
+
+    font-size: 35px;
+    color: white;
+
+}
+
+/*descrição ===================================================*/
+
+.img-desc {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.descricao {
+    display: flex;
+    justify-content: row;
+
+    font-size: 50px;
+    text-shadow: 0px 0px 10px white;
+    margin-top: 200px;
+}
+
+.linha-desc {
+    height: 2px;
+    width: 1500px;
+    background: linear-gradient(to right, rgb(255, 255, 255), transparent);
+    border: none;
+    margin-top: 30px;
+    margin-left: 50px;
+
+}
+
+.linha-cat {
+    height: 2px;
+    width: 1650px;
+    background: linear-gradient(to right, rgb(255, 255, 255), transparent);
+    border: none;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.linha-map {
+    height: 2px;
+    width: 1600px;
+    background: linear-gradient(to right, rgb(255, 255, 255), transparent);
+    border: none;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+/*criaturas ===================================================*/
+
+.criaturas {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(rgb(0, 0, 122), black);
+    border-radius: 20px;
+
+    border: 1px solid;
+    border-color: rgb(43, 43, 43);
+    width: 450px;
+    height: 600px;
+}
+
+.criatura {
+    background-color: white;
+    border-radius: 20px;
+    width: 350px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.nome {
+    font-size: 55px;
+    color: rgba(161, 41, 213, 0.734);
+}
+
+.cat {
+    font-size: 45px;
+    color: rgba(127, 255, 212, 0.683);
+}
+
+.cat-map {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
