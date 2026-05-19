@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
 
 body {
-    background-image: url(/public/assets/IMG/Fundo.jpeg);
+    background-image: url(../assets/IMG/Fundo.jpeg);
     background-repeat: 0;
     background-size: cover;
     background-position: center;
@@ -18,7 +18,7 @@ body {
 }
 
 .card {
-    background-image: url(/public/assets/IMG/Papel-envelhecido-mordido.png);
+    background-image: url(../assets/IMG/Papel-envelhecido-mordido.png);
     background-repeat: 0;
     background-size: cover;
     width: 689px;
@@ -92,7 +92,7 @@ body {
 
 
 .botao {
-    background-image: url(/public/assets/IMG/Botão-de-entrar.png);
+    background-image: url(../assets/IMG/Botão-de-entrar.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,4 +123,8 @@ body {
     font-size: 25px;
     margin-top: 5px;
     margin-right: 20px;
+}
+
+.link a{
+    color: rgba(50, 32, 24, 0.9);
 }
