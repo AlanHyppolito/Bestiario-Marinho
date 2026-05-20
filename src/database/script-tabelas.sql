@@ -12,7 +12,8 @@ data_cadastro datetime
 
 create table bestas(
 Id_besta int primary key auto_increment,
-nome_popular varchar(225)
+nome varchar(225),
+classe varchar(255)
 );   
 
 create table historico(
