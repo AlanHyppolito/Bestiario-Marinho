@@ -16,7 +16,7 @@ function buscarHistoricoPesquisa(Id_user) {
     return database.executar(instrucaoSql);
 }
 
-/*function buscarUltimasMedidas(idAquario, limite_linhas) {
+function buscarUltimasMedidas(idAquario, limite_linhas) {
 
     var instrucaoSql = `SELECT 
         dht11_temperatura as temperatura, 
@@ -29,9 +29,9 @@ function buscarHistoricoPesquisa(Id_user) {
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
-}*/
+}
 
 module.exports = {
-    //buscarUltimasMedidas,
+    buscarUltimasMedidas,
     buscarHistoricoPesquisa
 }

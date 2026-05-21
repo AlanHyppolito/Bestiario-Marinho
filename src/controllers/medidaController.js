@@ -1,6 +1,6 @@
 var medidaModel = require("../models/medidaModel");
 
-/*function buscarUltimasMedidas(req, res) {
+function buscarUltimasMedidas(req, res) {
 
     const limite_linhas = 7;
 
@@ -19,7 +19,7 @@ var medidaModel = require("../models/medidaModel");
         console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
         res.status(500).json(erro.sqlMessage);
     });
-}*/
+}
 
 
 function buscarHistoricoPesquisa(req, res) {
@@ -42,6 +42,6 @@ function buscarHistoricoPesquisa(req, res) {
 }
 
 module.exports = {
+    buscarUltimasMedidas,
     buscarHistoricoPesquisa
-
 }
