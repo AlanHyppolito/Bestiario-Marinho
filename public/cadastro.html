@@ -116,31 +116,26 @@
       mensagem_erro.innerHTML =
         "(Erro. Não pode haver campos em branco)";
 
-      finalizarAguardar();
       return false;
 
     } else if (nomeVar.length <= 1) {
       cardErro.style.display = "block";
 
-      finalizarAguardar();
       return false;
 
     } else if ((!antes && existe_arroba <= -1) && existe_ponto <= -1) {
       cardErro.style.display = "block";
 
-      finalizarAguardar();
       return false;
 
     } else if (senhaVar.length < 6) {
       cardErro.style.display = "block";
 
-      finalizarAguardar();
       return false;
 
     } else if (confirmacaoSenhaVar != senhaVar) {
       cardErro.style.display = "block";
-
-      finalizarAguardar();
+    
       return false;
 
     } else {
@@ -175,14 +170,12 @@
           }, "2000");
 
           limparFormulario();
-          finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
       });
 
     return false;

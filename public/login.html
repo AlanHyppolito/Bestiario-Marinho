@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <button class="botao">Entrar</button>
+        <button onclick="entrar()" class="botao">Entrar</button>
         <div class="link">
             <span>Novo Usuário? <a href="cadastro.html">Clique aqui!</a></span>
         </div>
@@ -40,10 +40,8 @@
 </body>
 
 </html>
-<script src="/src/controllers/login.js"></script>
 <script>
     function entrar() {
-        aguardar();
 
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
@@ -51,11 +49,7 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -82,9 +76,9 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-
+                    console.log(aqui)
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -95,18 +89,10 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
-        }).catch(function (erro) {
-            console.log(erro);
         })
-
         return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 </script>

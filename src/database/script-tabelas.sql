@@ -3,21 +3,21 @@ create database Bestiario_Marinho;
 use Bestiario_Marinho;
 
 create table users (
-Id_user int primary key auto_increment,
-Nome varchar(225) not null,
+id int primary key auto_increment,
+nome varchar(225) not null,
 email varchar(225) not null unique,
 senha varchar(40) not null,
 data_cadastro datetime
 );
 
 create table bestas(
-Id_besta int primary key auto_increment,
+id_besta int primary key auto_increment,
 nome varchar(225),
 classe varchar(255)
 );   
 
 create table historico(
-Id_pesquisa int primary key auto_increment,
+id_pesquisa int primary key auto_increment,
 fk_besta int,
 fk_usuario int,
 data_hora datetime default current_timestamp(),
