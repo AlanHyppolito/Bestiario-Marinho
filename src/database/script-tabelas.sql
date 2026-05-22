@@ -7,7 +7,7 @@ id int primary key auto_increment,
 nome varchar(225) not null,
 email varchar(225) not null unique,
 senha varchar(40) not null,
-data_cadastro datetime default current_timestamp()
+data_cadastro datetime default current_timestamp
 );
 
 create table bestas(
@@ -20,7 +20,7 @@ create table historico(
 id_pesquisa int primary key auto_increment,
 fk_besta int,
 fk_usuario int,
-data_hora datetime default current_timestamp(),
+data_hora datetime default current_timestamp,
 foreign key (fk_besta) references bestas(Id_besta),
 foreign key (fk_usuario) references users(Id_user)
 );
