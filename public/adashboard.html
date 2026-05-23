@@ -1,46 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/index.css">
-
-    <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body onload="obterDadosGrafico()">
-    <div class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img class="img-logo" src="assets/IMG/Logo.png" alt="Polvo segurando uma bussola">
-            </a>
-        </div>
-        <div class="ata">
-            <div class="atalhos"><a href="">Pesquisar</a></div>
-            <div class="atalhos"><a href="">Dashboard</a></div>
-            <div class="atalhos"><a href="">Historico</a></div>
-        </div>
-        <div class="exit"><a href="">Exit</a></div>
-    </div>
-    <div class="card-grafico">
         <div id="grafico">
             <canvas id="myChartCanvas"></canvas>
         </div>
-        <div class="grafico" id="div_grafico">
-
-        </div>
-    </div>
-    <div class="card-kpi">
-        <div class="kpi"></div>
-    </div>
-    <div id="b_usuario"></div>
 </body>
-
 </html>
-
 <script>
     function obterDadosGrafico() {
         // if (proximaAtualizacao != undefined) {
@@ -94,17 +65,17 @@
                 scales: {
                     x: {
                         ticks: {
-                            stepSize: 1,
-                            font: { size: 17 },
-                            color: ''
+                            stepSize: 1
+                            // font: { size: 17 },
+                            // color: '#1F2020'
                         }
                     },
                     y: {
                         beginAtZero: false,
                         ticks: {
-                            stepSize: 1,
-                            font: { size: 17 },
-                            color: ''
+                            stepSize: 1
+                            // font: { size: 17 },
+                            // color: '#1F2020'
                         }
                     }
                 },

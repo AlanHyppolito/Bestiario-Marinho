@@ -1,8 +1,12 @@
 var database = require("../database/config");
 
-function buscarAquariosPorEmpresa(id) {
+function buscarAquariosPorEmpresa(req, res) {
 
-  var instrucaoSql = `SELECT * FROM historico h WHERE fk_usuario = ${id}`;
+  var instrucaoSql = `select b.nome nome, count(fk_besta) Quantidade from historico h
+join bestas b on h.fk_besta = b.id_besta
+group by h.fk_besta
+order by count(fk_besta) desc
+limit 5;`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
