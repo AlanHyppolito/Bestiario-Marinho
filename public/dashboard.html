@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
 
     <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body onload="obterDadosGrafico()">
+
     <div class="header">
         <div class="logo">
             <a href="index.html">
@@ -19,24 +20,25 @@
             </a>
         </div>
         <div class="ata">
-            <div class="atalhos"><a href="">Pesquisar</a></div>
-            <div class="atalhos"><a href="">Dashboard</a></div>
-            <div class="atalhos"><a href="">Historico</a></div>
+            <div class="atalhos"><a href="pesquisa.html">Pesquisar</a></div>
+            <div class="atalhos"><a href="dashboard.html">Dashboard</a></div>
+            <div class="atalhos"><a href="historico.html">Historico</a></div>
         </div>
         <div class="exit"><a href="">Exit</a></div>
+    </div>
+    <div class="descricao">
+        <div class="linha-desc-esquerda"></div>
+        <div class="desc">As 10 criaturas mais populares!</div>
+        <div class="linha-desc-direita"></div>
     </div>
     <div class="card-grafico">
         <div id="grafico">
             <canvas id="myChartCanvas"></canvas>
         </div>
-        <div class="grafico" id="div_grafico">
-
-        </div>
     </div>
     <div class="card-kpi">
         <div class="kpi"></div>
     </div>
-    <div id="b_usuario"></div>
 </body>
 
 </html>
@@ -51,7 +53,7 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
+                    resposta;
 
                     plotarGrafico(resposta);
 
@@ -74,8 +76,10 @@
             labels: labels,
             datasets: [{
                 label: ['Pesquisas'],
+                color: 'white',
                 data: [],
-                fill: false,
+                fill: true,
+                backgroundColor: '#00b894',
                 borderColor: 'rgb(53,191,191)',
                 tension: 0.1
             }]
@@ -95,21 +99,21 @@
                     x: {
                         ticks: {
                             stepSize: 1,
-                            font: { size: 17 },
-                            color: ''
+                            font: { size: 25 },
+                            color: 'white'
                         }
                     },
                     y: {
-                        beginAtZero: false,
+                        beginAtZero: true,
                         ticks: {
                             stepSize: 1,
-                            font: { size: 17 },
-                            color: ''
+                            font: { size: 20 },
+                            color: 'white'
                         }
                     }
                 },
                 maintainAspectRatio: true
-            }   
+            }
         });
     }
 </script>

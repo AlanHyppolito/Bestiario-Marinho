@@ -9,7 +9,8 @@ body {
     font-size: 30px;
     color: white;
     margin-left: 150px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 /*header ======================================================*/
@@ -21,9 +22,9 @@ body {
     display: flex;
     align-items: center;
     margin-top: -10px;
-    margin-left: -130px;
     font-size: 50px;
     box-shadow: blur(3px);
+    height: 250px;
 }
 
 .img-logo {
@@ -94,6 +95,18 @@ a{
     font-size: 35px;
     color: white;
 
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+
+}
+.button:hover {
+    transform: scale(0.95);
+    filter: brightness(1.1);
+}
+
+.button:active {
+    transform: scale(0.90);
+    filter: brightness(0.9);
 }
 
 /*descrição ===================================================*/
@@ -187,5 +200,3 @@ a{
     flex-direction: row;
     justify-content: space-around;
 }
-
-====================================================================

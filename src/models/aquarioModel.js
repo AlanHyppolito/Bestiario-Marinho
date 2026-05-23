@@ -6,7 +6,7 @@ function buscarAquariosPorEmpresa(req, res) {
 join bestas b on h.fk_besta = b.id_besta
 group by h.fk_besta
 order by count(fk_besta) desc
-limit 5;`;
+limit 10;`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
