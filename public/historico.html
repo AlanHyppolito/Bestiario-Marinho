@@ -39,33 +39,58 @@
                     </select>
                 </div>
                 <div class="exibirHistorico">
-                    <div class="data"></div>
-                    <div class="hora"></div>
-                    <div class="besta"></div>
+                    <div class="data" id="data"></div>
+                    <div class="hora" id="hora"></div>
+                    <div class="besta" id="nome"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script>
+    var Id_user = sessionStorage.ID_USUARIO
+
     function obterDadosHistorico() {
-        var intervaloTempo = document.getElementById("sel_periodo");
+    data.innerHTML = ``;
+    hora.innerHTML = ``;
+    nome.innerHTML = ``;
 
-        fetch(`/aquarios`).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta;
+    var intervaloTempo = document.getElementById("sel_periodo").value; 
 
-                    plotarGrafico(resposta);
+    fetch(`/buscar/${Id_user}/${intervaloTempo}`).then(function (response) {
+        if (response.ok) {
+            response.text().then(function (texto) {
+                if (!texto || texto === "[]") {
+                    console.log("Nenhum dado encontrado no histórico para este período.");
+                    data.innerHTML = "Sem registros.";
+                    return;
+                }
 
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                var resposta = JSON.parse(texto);
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                mostrarHistorico(resposta);
             });
+        } else {
+            console.error('Erro na resposta da API');
+        }
+    })
+    .catch(function (error) {
+        console.error(`Erro na obtenção dos dados: ${error.message}`);
+    });
+}
+
+    function mostrarHistorico(resposta) {
+
+        for (let i = 0; i < resposta.length; i++) {
+
+            var indiceH = resposta[i];
+
+
+            data.innerHTML += `${indiceH.data} <br>`
+            hora.innerHTML += `${indiceH.hora} <br>`
+            nome.innerHTML += `${indiceH.nome} <br>`
+        }
     }
+
+
 </script>

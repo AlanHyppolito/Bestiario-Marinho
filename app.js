@@ -15,10 +15,12 @@ var HOST_APP = process.env.APP_HOST;
 
 var app = express();
 
+
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var medidasRouter = require("./src/routes/medidas");
 var aquariosRouter = require("./src/routes/aquarios");
+var historicoRoutes = require ( "./src/routes/historico");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,7 +32,7 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/medidas", medidasRouter);
 app.use("/", aquariosRouter);
-
+app.use ("/", historicoRoutes);
 
 
 app.listen(PORTA_APP, function () {
