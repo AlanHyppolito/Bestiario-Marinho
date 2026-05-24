@@ -13,6 +13,12 @@ body {
     flex-direction: column;
 }
 
+body img {
+    display: flex;
+    justify-items: center;
+
+}
+
 /*header ======================================================*/
 
 .header {
