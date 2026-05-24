@@ -19,9 +19,7 @@ function buscarHistoricoPesquisa(Id_user) {
 function buscarUltimasMedidas(idAquario, limite_linhas) {
 
     var instrucaoSql = `SELECT 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        momento,
+        
                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
                     FROM medida
                     WHERE fk_aquario = ${idAquario}

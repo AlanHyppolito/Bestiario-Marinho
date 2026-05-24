@@ -1,6 +1,12 @@
+-- ------------------------------------------------------------------------------
+
 create database Bestiario_Marinho;
 
+-- ------------------------------------------------------------------------------
+
 use Bestiario_Marinho;
+
+-- ------------------------------------------------------------------------------
 
 create table users (
 id int primary key auto_increment,
@@ -10,20 +16,31 @@ senha varchar(40) not null,
 data_cadastro datetime default current_timestamp
 );
 
+-- ------------------------------------------------------------------------------
+
 create table bestas(
 id_besta int primary key auto_increment,
 nome varchar(225),
 classe varchar(255)
 );   
 
+-- ------------------------------------------------------------------------------
+
 create table historico(
 id_pesquisa int primary key auto_increment,
 fk_besta int,
 fk_usuario int,
-data_hora datetime default current_timestamp,
-foreign key (fk_besta) references bestas(Id_besta),
-foreign key (fk_usuario) references users(Id_user)
+data_hora date default (current_date),
+hora time default (current_time),
+foreign key (fk_besta) references bestas(id_besta),
+foreign key (fk_usuario) references users(id)
 );
+
+-- ------------------------------------------------------------------------------
+
+-- inserts
+
+-- ------------------------------------------------------------------------------
 
 insert into users (Nome, email, senha) values
 ('Alan Crivellaro Hyppolito', 'alan.hyppolito@gmail.com', 'alan123'),
@@ -32,6 +49,8 @@ insert into users (Nome, email, senha) values
 ('Ricardo Kazuo Inoue', 'ricardo.kazuo@gmail.com', 'ricardo123'),
 ('Murilo Mendes Leon', 'murilo.leon@gmail.com', 'murilo123'),
 ('Letícia Miranda Bastos', 'leticia.miranda@gmail.com', 'leticia123');
+
+-- ------------------------------------------------------------------------------
 
 insert into bestas (nome) values
 ('Kraken'),
@@ -46,6 +65,8 @@ insert into bestas (nome) values
 ('Megalodon'),  --                      
 ('Kappa'),-- 
 ('Hipocampo');
+
+-- ------------------------------------------------------------------------------
 
 insert into historico (fk_besta, fk_usuario) values
 (1, 1),  -- Alan pesquisou Kraken
@@ -86,3 +107,32 @@ insert into historico (fk_besta, fk_usuario) values
 (10, 5), -- Murilo pesquisou Megalodon
 (11, 1), -- Alan pesquisou Kappa
 (12, 4); -- Ricardo pesquisou Hipocampo
+
+-- ------------------------------------------------------------------------------
+
+-- selects
+
+-- ------------------------------------------------------------------------------
+
+SELECT 
+    h.data_hora AS data,
+    h.hora AS hora,
+    b.nome AS besta,
+    u.nome AS usuario
+FROM historico h
+JOIN bestas b 
+    ON h.fk_besta = b.id_besta
+JOIN users u 
+    ON h.fk_usuario = u.id
+ORDER BY h.data_hora, h.hora;
+
+-- ------------------------------------------------------------------------------
+
+select h.dia data, h.hora hora, b.nome nome
+from historico h
+join bestas b on h.fk_besta = b.id_besta
+join users u on h.fk_usuario = u.id
+where u.id = 1 and h.dia >= curdate() - interval 15 day
+order by h.dia desc, h.hora desc;
+
+-- ------------------------------------------------------------------------------

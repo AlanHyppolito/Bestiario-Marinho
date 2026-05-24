@@ -12,6 +12,16 @@ limit 10;`;
   return database.executar(instrucaoSql);
 }
 
+function BuscarHistoricoPorUsuario(Id_user, intervaloTempo) {
+  var instrucaoSql = `select h.dia data, h.hora hora, b.nome nome
+from historico h
+join bestas b on h.fk_besta = b.id_besta
+join users u on h.fk_usuario = u.id
+where u.id = ${Id_user} and h.dia >= curdate() - interval ${intervaloTempo} -- depende do intervalo de tempo day/month
+order by h.dia desc, h.hora desc;`
+}
+
 module.exports = {
-  buscarAquariosPorEmpresa
+  buscarAquariosPorEmpresa,
+  BuscarHistoricoPorUsuario
 }

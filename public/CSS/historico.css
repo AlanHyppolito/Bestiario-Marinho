@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
+body {
+    background-image: url(../assets/IMG/Fundo-home.png);
+    background-repeat: 0;
+    background-size: cover;
+    background-clip: inherit;
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*header ======================================================*/
+
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    font-size: 50px;
+    box-shadow: blur(3px);
+    height: 250px;
+}
+
+.img-logo {
+    width: 450px;
+}
+
+.ata {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    align-items: center
+}
+
+.atalhos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    margin: 80px;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+.exit{
+    margin-right: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*cardHistorico ======================================================================================*/
+
+
+
+.historico::-webkit-scrollbar{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
