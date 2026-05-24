@@ -1,48 +1,49 @@
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-create database Bestiario_Marinho;
+CREATE DATABASE Bestiario_Marinho;
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-use Bestiario_Marinho;
+USE Bestiario_Marinho;
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-create table users (
-id int primary key auto_increment,
-nome varchar(225) not null,
-email varchar(225) not null unique,
-senha varchar(40) not null,
-data_cadastro datetime default current_timestamp
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(225) NOT NULL,
+    email VARCHAR(225) NOT NULL UNIQUE,
+    senha VARCHAR(40) NOT NULL,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-create table bestas(
-id_besta int primary key auto_increment,
-nome varchar(225),
-classe varchar(255)
-);   
-
--- ------------------------------------------------------------------------------
-
-create table historico(
-id_pesquisa int primary key auto_increment,
-fk_besta int,
-fk_usuario int,
-data_hora date default (current_date),
-hora time default (current_time),
-foreign key (fk_besta) references bestas(id_besta),
-foreign key (fk_usuario) references users(id)
+CREATE TABLE bestas (
+    id_besta INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(225) NOT NULL,
+    classe VARCHAR(255) NOT NULL
 );
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
--- inserts
+CREATE TABLE historico (
+    id_pesquisa INT PRIMARY KEY AUTO_INCREMENT,
+    fk_besta INT,
+    fk_usuario INT,
+    dia DATE DEFAULT (CURRENT_DATE),
+    hora TIME DEFAULT (CURRENT_TIME),
 
--- ------------------------------------------------------------------------------
+    FOREIGN KEY (fk_besta) REFERENCES bestas(id_besta),
+    FOREIGN KEY (fk_usuario) REFERENCES users(id)
+);
 
-insert into users (Nome, email, senha) values
+-- --------------------------------------------------------------------------
+
+-- INSERTS
+
+-- --------------------------------------------------------------------------
+
+INSERT INTO users (nome, email, senha) VALUES
 ('Alan Crivellaro Hyppolito', 'alan.hyppolito@gmail.com', 'alan123'),
 ('Rafaela Mayumi Wada Fukuda', 'rafaela.mayumi@gmail.com', 'rafaela123'),
 ('Luiz Fernando Silva Correia', 'luiz.fernando@gmail.com', 'luiz123'),
@@ -50,69 +51,109 @@ insert into users (Nome, email, senha) values
 ('Murilo Mendes Leon', 'murilo.leon@gmail.com', 'murilo123'),
 ('Letícia Miranda Bastos', 'leticia.miranda@gmail.com', 'leticia123');
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-insert into bestas (nome) values
-('Kraken'),
-('Jörmungandr'),
-('Sereias'),
-('Cila'),
-('Ryūjin'),
-('Leviatã'),
-('Aspidochelone'),
-('Cthulhu'),
-('Godzilla'), -- 
-('Megalodon'),  --                      
-('Kappa'),-- 
-('Hipocampo');
+INSERT INTO bestas (nome, classe) VALUES
+('Kraken', 'Mitologia Nórdica'),
+('Jörmungandr', 'Mitologia Nórdica'),
+('Sereias', 'Mitologia Grega'),
+('Cila', 'Mitologia Grega'),
+('Ryūjin', 'Mitologia Japonesa'),
+('Leviatã', 'Mitologia Hebraica'),
+('Aspidochelone', 'Mitologia Medieval'),
+('Cthulhu', 'Horror Cósmico'),
+('Godzilla', 'Kaiju'),
+('Megalodon', 'Pré-Histórico'),
+('Kappa', 'Folclore Japonês'),
+('Hipocampo', 'Mitologia Grega');
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-insert into historico (fk_besta, fk_usuario) values
-(1, 1),  -- Alan pesquisou Kraken
-(2, 1),  -- Alan pesquisou Jörmungandr
-(3, 2),  -- Rafaela pesquisou Sereias
-(5, 2),  -- Rafaela pesquisou Ryūjin
-(4, 3),  -- Luiz pesquisou Cila
-(10, 3), -- Luiz pesquisou Megalodon
-(6, 4),  -- Ricardo pesquisou Leviatã
-(8, 4),  -- Ricardo pesquisou Cthulhu
-(9, 5),  -- Murilo pesquisou Godzilla
-(11, 5), -- Murilo pesquisou Kappa
-(7, 6),  -- Letícia pesquisou Aspidochelone
-(4, 1),  -- Alan pesquisou Cila
-(5, 6),  -- Letícia pesquisou Ryūjin
-(6, 3),  -- Luiz pesquisou Leviatã
-(7, 2),  -- Rafaela pesquisou Aspidochelone
-(8, 5),  -- Murilo pesquisou Cthulhu
-(9, 4),  -- Ricardo pesquisou Godzilla
-(10, 1), -- Alan pesquisou Megalodon
-(11, 6), -- Letícia pesquisou Kappa
-(12, 2), -- Rafaela pesquisou Hipocampo
-(1, 5),  -- Murilo pesquisou Kraken
-(2, 3),  -- Luiz pesquisou Jörmungandr
-(3, 1),  -- Alan pesquisou Sereias
-(4, 6),  -- Letícia pesquisou Cila
-(5, 4),  -- Ricardo pesquisou Ryūjin
-(6, 1),  -- Alan pesquisou Leviatã
-(7, 5),  -- Murilo pesquisou Aspidochelone
-(8, 2),  -- Rafaela pesquisou Cthulhu
-(9, 3),  -- Luiz pesquisou Godzilla
-(10, 6), -- Letícia pesquisou Megalodon
-(11, 4), -- Ricardo pesquisou Kappa
-(12, 5), -- Murilo pesquisou Hipocampo
-(7, 4),  -- Ricardo pesquisou Aspidochelone
-(8, 3),  -- Luiz pesquisou Cthulhu
-(9, 2),  -- Rafaela pesquisou Godzilla
-(10, 5), -- Murilo pesquisou Megalodon
-(11, 1), -- Alan pesquisou Kappa
-(12, 4); -- Ricardo pesquisou Hipocampo
+INSERT INTO historico (fk_besta, fk_usuario, dia, hora) VALUES
+(1, 1, '2026-05-01', '08:15:22'),
+(2, 1, '2026-05-01', '08:20:10'),
+(4, 1, '2026-05-02', '09:40:18'),
+(10, 1, '2026-05-03', '14:12:55'),
+(3, 1, '2026-05-04', '16:30:00'),
+(6, 1, '2026-05-05', '18:44:27'),
+(11, 1, '2026-05-06', '20:10:31'),
+(8, 1, '2026-05-07', '21:55:40'),
+(9, 1, '2026-05-08', '22:12:18'),
+(5, 1, '2026-05-09', '10:22:01'),
+(3, 2, '2026-05-01', '11:05:44'),
+(5, 2, '2026-05-02', '13:15:30'),
+(7, 2, '2026-05-03', '15:40:22'),
+(12, 2, '2026-05-04', '17:18:03'),
+(8, 2, '2026-05-05', '19:10:45'),
+(9, 2, '2026-05-06', '20:55:10'),
+(1, 2, '2026-05-07', '08:12:09'),
+(4, 2, '2026-05-08', '09:45:00'),
+(6, 2, '2026-05-09', '12:00:31'),
+(11, 2, '2026-05-10', '14:42:18'),
+(4, 3, '2026-05-01', '07:30:00'),
+(10, 3, '2026-05-01', '08:00:00'),
+(6, 3, '2026-05-02', '10:22:11'),
+(2, 3, '2026-05-03', '13:55:45'),
+(9, 3, '2026-05-04', '15:15:15'),
+(8, 3, '2026-05-05', '18:45:30'),
+(12, 3, '2026-05-06', '20:10:20'),
+(1, 3, '2026-05-07', '21:55:11'),
+(5, 3, '2026-05-08', '23:01:50'),
+(11, 3, '2026-05-09', '23:59:59'),
+(6, 4, '2026-05-01', '09:10:10'),
+(8, 4, '2026-05-02', '10:20:20'),
+(9, 4, '2026-05-03', '11:30:30'),
+(5, 4, '2026-05-04', '12:40:40'),
+(11, 4, '2026-05-05', '13:50:50'),
+(12, 4, '2026-05-06', '14:15:25'),
+(7, 4, '2026-05-07', '15:35:45'),
+(3, 4, '2026-05-08', '16:55:05'),
+(1, 4, '2026-05-09', '17:45:15'),
+(10, 4, '2026-05-10', '18:20:40'),
+(9, 5, '2026-05-01', '08:08:08'),
+(11, 5, '2026-05-02', '09:09:09'),
+(8, 5, '2026-05-03', '10:10:10'),
+(1, 5, '2026-05-04', '11:11:11'),
+(7, 5, '2026-05-05', '12:12:12'),
+(12, 5, '2026-05-06', '13:13:13'),
+(10, 5, '2026-05-07', '14:14:14'),
+(4, 5, '2026-05-08', '15:15:15'),
+(2, 5, '2026-05-09', '16:16:16'),
+(6, 5, '2026-05-10', '17:17:17'),
+(7, 6, '2026-05-01', '06:45:20'),
+(5, 6, '2026-05-02', '07:55:35'),
+(11, 6, '2026-05-03', '09:05:50'),
+(4, 6, '2026-05-04', '10:15:05'),
+(10, 6, '2026-05-05', '11:25:20'),
+(2, 6, '2026-05-06', '12:35:35'),
+(3, 6, '2026-05-07', '13:45:50'),
+(8, 6, '2026-05-08', '14:55:05'),
+(1, 6, '2026-05-09', '16:05:20'),
+(12, 6, '2026-05-10', '17:15:35'),
+(2, 1, '2026-05-11', '08:00:00'),
+(3, 1, '2026-05-11', '08:05:00'),
+(5, 2, '2026-05-11', '09:10:00'),
+(6, 3, '2026-05-11', '10:15:00'),
+(8, 4, '2026-05-11', '11:20:00'),
+(10, 5, '2026-05-11', '12:25:00'),
+(12, 6, '2026-05-11', '13:30:00'),
+(1, 2, '2026-05-12', '14:35:00'),
+(4, 3, '2026-05-12', '15:40:00'),
+(7, 4, '2026-05-12', '16:45:00'),
+(9, 5, '2026-05-12', '17:50:00'),
+(11, 6, '2026-05-12', '18:55:00'),
+(6, 1, '2026-05-13', '19:00:00'),
+(8, 2, '2026-05-13', '19:10:00'),
+(10, 3, '2026-05-13', '19:20:00'),
+(12, 4, '2026-05-13', '19:30:00'),
+(2, 5, '2026-05-13', '19:40:00'),
+(4, 6, '2026-05-13', '19:50:00');
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
--- selects
+-- SELECT 
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
 SELECT 
     h.data_hora AS data,
@@ -126,13 +167,11 @@ JOIN users u
     ON h.fk_usuario = u.id
 ORDER BY h.data_hora, h.hora;
 
--- ------------------------------------------------------------------------------
+-- --------------------------------------------------------------------------
 
-select h.dia data, h.hora hora, b.nome nome
-from historico h
-join bestas b on h.fk_besta = b.id_besta
-join users u on h.fk_usuario = u.id
-where u.id = 1 and h.dia >= curdate() - interval 15 day
-order by h.dia desc, h.hora desc;
-
--- ------------------------------------------------------------------------------
+SELECT h.dia data, h.hora hora, b.nome nome
+FROM historico h
+JOIN bestas b ON h.fk_besta = b.id_besta
+JOIN users u ON h.fk_usuario = u.id
+WHERE u.id = 1 and h.dia >= curdate() - interval 15 day
+ORDER BY h.dia DESC, h.hora DESC;
