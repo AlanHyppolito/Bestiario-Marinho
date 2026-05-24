@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="obterDadosHistorico()">
 
     <div class="header">
         <div class="logo">
@@ -31,7 +31,7 @@
             <div class="historico">
                 <div class="historico-select">
                     <p class="titulo">Historico</p>
-                    <select class="select" name="periodo" id="sel_periodo">
+                    <select class="select" name="periodo" id="sel_periodo" onchange="obterDadosHistorico()">
                         <option value="7 day">7 dias</option>
                         <option value="1 month">1 mês</option>
                         <option value="3 month">3 mêses</option>
@@ -39,11 +39,33 @@
                     </select>
                 </div>
                 <div class="exibirHistorico">
-                    <div class="data">sdasd</div>
-                    <div class="hora">asd</div>
-                    <div class="besta">da</div>
+                    <div class="data"></div>
+                    <div class="hora"></div>
+                    <div class="besta"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    function obterDadosHistorico() {
+        var intervaloTempo = document.getElementById("sel_periodo");
+
+        fetch(`/aquarios`).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta;
+
+                    plotarGrafico(resposta);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+</script>
