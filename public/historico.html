@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/historico.css">
-
+    <script src="./js/sessao.js"></script>
     <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -24,9 +24,26 @@
             <div class="atalhos"><a href="dashboard.html">Dashboard</a></div>
             <div class="atalhos"><a href="historico.html">Historico</a></div>
         </div>
-        <div class="exit"><a href="">Sair</a></div>
+        <div class="exit"><a onclick="limparSessao()">Sair</a></div>
     </div>
-    <div class="card-historico">
-        <div class="titulo">Historico</div>
-        <div class="historico"></div>
+    <div class="teste">
+        <div class="card-historico">
+            <div class="historico">
+                <div class="historico-select">
+                    <p class="titulo">Historico</p>
+                    <select class="select" name="periodo" id="sel_periodo">
+                        <option value="7 day">7 dias</option>
+                        <option value="1 month">1 mês</option>
+                        <option value="3 month">3 mêses</option>
+                        <option value="6 month">6 mêses</option>
+                    </select>
+                </div>
+                <div class="exibirHistorico">
+                    <div class="data">sdasd</div>
+                    <div class="hora">asd</div>
+                    <div class="besta">da</div>
+                </div>
+            </div>
+        </div>
     </div>
+</body>

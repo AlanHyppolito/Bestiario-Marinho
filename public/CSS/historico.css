@@ -6,10 +6,17 @@ body {
     background-size: cover;
     background-clip: inherit;
     font-family: 'Jim Nightshade', cursive;
-    font-size: 30px;
+    font-size: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    overflow: hidden;
+}
+
+body img {
+    display: flex;
+    justify-items: center;
+
 }
 
 /*header ======================================================*/
@@ -17,12 +24,10 @@ body {
 .header {
     flex-direction: row;
     justify-content: space-between;
-    backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
     margin-top: -10px;
     font-size: 50px;
-    box-shadow: blur(3px);
     height: 250px;
 }
 
@@ -34,7 +39,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     display: flex;
-    align-items: center
+    align-items: center;
+    margin-left: -220px;
 }
 
 .atalhos {
@@ -47,20 +53,95 @@ body {
     text-decoration: none;
 }
 
-.exit{
+.exit {
     margin-right: 150px;
+    cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
 /*cardHistorico ======================================================================================*/
 
+.teste {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+.card-historico {
+    background-image: url(../assets/IMG/papel.png);
+    background-repeat: 0;
+    background-size: cover;
+    background-clip: inherit;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
-.historico::-webkit-scrollbar{
+    width: 860px;
+    height: 1100px;
+    color: rgba(50, 32, 24, 0.9);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+    margin-top: -80px;
+}
+
+-- Historico ------------------------------------------------------------------------ .titulo {
+    font-size: 60px;
+}
+
+.historico-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.select{
+    width: 100px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid;
+    border-color:rgba(50, 32, 24, 0.9);
+    border-radius: 20px;
+    margin-left: 30px;
+    font-size: 35px;
+    font-family: 'Jim Nightshade', cursive;
+    color: rgba(50, 32, 24, 0.9);
+}
+
+.historico {
+    width: 500px;
+    height: 840px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exibirHistorico {
+    font-size: 30px;
+    width: 500px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    background-color: darkblue;
+    margin-top: -30px;
+}
+
+.data,
+.hora,
+.besta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: brown;
+}
+
+.exibirHistorico::-webkit-scrollbar {
     overflow-x: hidden;
     overflow-y: auto;
 }

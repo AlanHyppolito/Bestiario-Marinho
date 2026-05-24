@@ -17,12 +17,10 @@ body {
 .header {
     flex-direction: row;
     justify-content: space-between;
-    backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
     margin-top: -10px;
     font-size: 50px;
-    box-shadow: blur(3px);
     height: 250px;
 }
 
@@ -34,7 +32,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     display: flex;
-    align-items: center
+    align-items: center;
+    margin-left: -220px;
 }
 
 .atalhos {
@@ -49,7 +48,7 @@ body {
 
 .exit{
     margin-right: 150px;
-    
+    cursor: pointer;
 }
 
 a{
@@ -70,9 +69,8 @@ a{
     justify-content: space-around;
     width: 1600px;
     height: 800px;
-    margin-top: 80px;
-    margin-left: 500px
-
+    margin-left: 500px;
+    margin-top: 30px;
 }
 
 /* Descrição ======================================================================================*/
@@ -81,7 +79,7 @@ a{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin-top: 40px;
+
 }
 
 .desc{

@@ -18,13 +18,13 @@ body {
 .header {
     flex-direction: row;
     justify-content: space-between;
-    backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
-    margin-top: -10px;
+
     font-size: 50px;
-    box-shadow: blur(3px);
     height: 250px;
+    margin-left: -142px;
+    margin-bottom: 120px;
 }
 
 .img-logo {
@@ -35,7 +35,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     display: flex;
-    align-items: center
+    align-items: center;
+    margin-left: -220px;
 }
 
 .atalhos {
@@ -137,7 +138,7 @@ a{
 
 .linha-cat {
     height: 2px;
-    width: 1650px;
+    width: 700px;
     background: linear-gradient(to right, rgb(255, 255, 255), transparent);
     border: none;
     margin-top: 30px;
@@ -146,7 +147,7 @@ a{
 
 .linha-map {
     height: 2px;
-    width: 1600px;
+    width: 700px;
     background: linear-gradient(to right, rgb(255, 255, 255), transparent);
     border: none;
     margin-top: 30px;
@@ -195,8 +196,41 @@ a{
     color: rgba(127, 255, 212, 0.683);
 }
 
+
+/* -- cat-map ------------------------------------------------------------------- */
+
+
 .cat-map {
+    display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.mapa{
+    width: 1000px;
+    
+
+}
+
+/* -- footer ------------------------------------------------------------------------ */
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.txt-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 45px;
+    margin-left: 500px;
+}
+
+.github{
+    width: 90px;
+    margin-left: 700px;
 }
