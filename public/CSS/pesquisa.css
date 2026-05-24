@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
+body {
+    background-image: url(../assets/IMG/Fundo-home.png);
+    background-repeat: 0;
+    background-size: cover;
+    background-clip: inherit;
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+body img {
+    display: flex;
+    justify-items: center;
+
+}
+
+/*header ======================================================*/
+
+.header {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    height: 250px;
+}
+
+.img-logo {
+    width: 450px;
+}
+
+.ata {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-left: -220px;
+}
+
+.atalhos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-content: space-around;
+    margin: 80px;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+.exit {
+    margin-right: 150px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

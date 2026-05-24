@@ -1,6 +1,7 @@
 let bestaMap = {
     "Kraken": {
         "id": "1",
+        "img": "",
         "classe": "Abissais",
         "origem": "Folclore Nórdico",
         "sobre": "Nas antigas lendas do norte europeu, o Kraken era descrito como uma criatura colossal que habitava os mares gelados entre a Noruega e a Islândia. Marinheiros acreditavam que sua presença podia ser percebida antes mesmo de surgir das profundezas, quando o oceano ficava silencioso e enormes redemoinhos começavam a se formar ao redor dos navios.\n\nRelatos antigos afirmavam que seus tentáculos gigantescos eram capazes de envolver embarcações inteiras, quebrando mastros e arrastando tripulações para o fundo do mar. Muitos navegadores associavam o Kraken às tempestades mais violentas do oceano, acreditando que a criatura despertava sempre que os mares eram tomados pela fúria dos céus.\n\nCom o passar dos séculos, o Kraken se tornou uma das criaturas marítimas mais temidas do folclore nórdico. Histórias sobre sua existência atravessaram gerações, transformando o monstro em símbolo do desconhecido e dos perigos escondidos nas profundezas do oceano."
@@ -66,7 +67,7 @@ let bestaMap = {
         "id": "10",
         "classe": "Abissais",
         "origem": "Pré-Histórico",
-        "sobre":  "O Megalodon foi o maior tubarão predador que já existiu nos oceanos da Terra. Com mandíbulas gigantescas e dentes do tamanho de mãos humanas, dominava os mares pré-históricos como uma força impossível de enfrentar.\n\nMesmo após ser considerado extinto pela ciência, diversas histórias modernas afirmam que criaturas semelhantes ainda habitam regiões profundas e inexploradas do oceano. Relatos de embarcações desaparecidas e sombras gigantes sob as águas alimentaram ainda mais essas teorias.\n\nCombinando fatos reais e lendas contemporâneas, o Megalodon se transformou em uma das criaturas marinhas mais assustadoras já imaginadas. Sua presença simboliza o medo do que ainda pode existir escondido nas profundezas do planeta."
+        "sobre": "O Megalodon foi o maior tubarão predador que já existiu nos oceanos da Terra. Com mandíbulas gigantescas e dentes do tamanho de mãos humanas, dominava os mares pré-históricos como uma força impossível de enfrentar.\n\nMesmo após ser considerado extinto pela ciência, diversas histórias modernas afirmam que criaturas semelhantes ainda habitam regiões profundas e inexploradas do oceano. Relatos de embarcações desaparecidas e sombras gigantes sob as águas alimentaram ainda mais essas teorias.\n\nCombinando fatos reais e lendas contemporâneas, o Megalodon se transformou em uma das criaturas marinhas mais assustadoras já imaginadas. Sua presença simboliza o medo do que ainda pode existir escondido nas profundezas do planeta."
     },
 
     "Kappa": {
