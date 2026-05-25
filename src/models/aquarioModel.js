@@ -12,6 +12,15 @@ limit 10;`;
   return database.executar(instrucaoSql);
 }
 
+function inserirInformacao(bestaI1, user1){
+  var instrucaoSql= `insert into historico (fk_besta, fk_usuario)
+  value (${bestaI1}, ${user1});`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
-  buscarAquariosPorEmpresa
+  buscarAquariosPorEmpresa,
+  inserirInformacao
 }

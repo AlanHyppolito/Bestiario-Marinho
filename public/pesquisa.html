@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./js/sessao.js"></script>
     <link rel="stylesheet" href="./CSS/pesquisa.css">
@@ -28,7 +28,8 @@
         <div class="fundo-pesquisa">
             <div class="card-pesquisa">
                 <div class="pesquisa">
-                    <input type="text" id="ipt_pesquisa" list="lista-criaturas" placeholder="Pesquisa" oninput="exibirTexto()">
+                    <input type="text" id="ipt_pesquisa" list="lista-criaturas" placeholder="Pesquisa"
+                        oninput="exibirTexto()">
                     <datalist id="lista-criaturas">
                         <option value="Kraken">Kraken</option>
                         <option value="Jörmungandr">Jörmungandr</option>
@@ -77,26 +78,65 @@
 
     let besta = "";
 
-function exibirTexto() {
-    
-    besta = document.getElementById("ipt_pesquisa").value;
+    function exibirTexto() {
 
-    if (bestaMap[besta]) {
-        console.log(`Besta selecionada: ${besta}`);
+        besta = document.getElementById("ipt_pesquisa").value;
 
-        img.innerHTML = `<img class="img" src="${bestaMap[besta].img}" alt="${besta}">`;
-        nomeB.innerHTML = `<b>Nome:</b> ${besta}`;
-        classe.innerHTML = `<b>Classe:</b> ${bestaMap[besta].classe}`;
-        origem.innerHTML = `<b>Origem:</b> ${bestaMap[besta].origem}`;
-        texto.innerHTML = `${bestaMap[besta].sobre}`;
+        if (bestaMap[besta]) {
+            console.log(`Besta selecionada: ${besta}`);
 
-    } else {
+            img.innerHTML = `<img class="img" src="${bestaMap[besta].img}" alt="${besta}">`;
+            nomeB.innerHTML = `<b>Nome:</b> ${besta}`;
+            classe.innerHTML = `<b>Classe:</b> ${bestaMap[besta].classe}`;
+            origem.innerHTML = `<b>Origem:</b> ${bestaMap[besta].origem}`;
+            texto.innerHTML = `${bestaMap[besta].sobre}`;
 
-        img.innerHTML = "";
-        nomeB.innerHTML = "";
-        classe.innerHTML = "";
-        origem.innerHTML = "";
-        texto.innerHTML = "";
+        } else {
+
+            img.innerHTML = "";
+            nomeB.innerHTML = "";
+            classe.innerHTML = "";
+            origem.innerHTML = "";
+            texto.innerHTML = "";
+        }
+        inserirPesquisa()
     }
-}
+    function inserirPesquisa() {
+
+        besta = document.getElementById("ipt_pesquisa").value;
+
+        var bestaI = bestaMap[besta].id
+
+        var user = sessionStorage.ID_USUARIO
+
+        fetch("/aquariosInserir", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                userServer: user,
+                bestaIServer: bestaI
+            }),
+        }).then(function (resposta) {
+            console.log("resposta: ", resposta);
+            console.log(bestaI, user)
+            if (resposta.ok) {
+                console.log(
+                    "Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+
+            } else {
+                console.log( "Houve um erro ao tentar realizar o cadastro!")
+            }
+        })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
+
+
 </script>
