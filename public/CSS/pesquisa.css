@@ -92,8 +92,76 @@ a {
     height: 800px;
     margin-top: 140px;
     margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.card-pesquisa::-webkit-scrollbar {
+    width: 8px;                
+}
+
+.card-pesquisa::-webkit-scrollbar-track {
+    background: #e6ccb2;
+    border-radius: 4px;
+}
+
+.card-pesquisa::-webkit-scrollbar-thumb {
+    background: #7f5539;
+    border-radius: 4px;
 }
 
 .pesquisa{
-    
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+input{
+    width: 300px;
+    padding-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(50, 32, 24, 0.9);
+    outline: none;
+    color: rgba(50, 32, 24, 0.9);
+    font-size: 30px;
+    text-align: center;
+}
+
+input::placeholder {
+    color:  rgba(50, 32, 24, 0.9);
+}
+
+.resp{
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 35px;
+}
+
+.img{
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    color: rgba(50, 32, 24, 0.9);
+    margin-top: 10px;
+}
+
+.texto{
+    font-size: 40px;
+    color: rgba(50, 32, 24, 0.9);
 }

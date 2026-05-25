@@ -28,11 +28,11 @@
         <div class="fundo-pesquisa">
             <div class="card-pesquisa">
                 <div class="pesquisa">
-                    <input type="text" id="" list="lista-criaturas" placeholder="Pesquisa">
+                    <input type="text" id="ipt_pesquisa" list="lista-criaturas" placeholder="Pesquisa" oninput="exibirTexto()">
                     <datalist id="lista-criaturas">
                         <option value="Kraken">Kraken</option>
                         <option value="Jörmungandr">Jörmungandr</option>
-                        <option value="Sereias">Sereias</option>
+                        <option value="Sereia">Sereia</option>
                         <option value="Cila">Cila</option>
                         <option value="Ryūjin">Ryūjin</option>
                         <option value="Leviatã">Leviatã</option>
@@ -55,8 +55,16 @@
                         <option value="Zaratan">Zaratan</option>
                     </datalist>
                 </div>
-                <div class="texto">
-
+                <div class="resp">
+                    <div class="inicio">
+                        <div class="img" id="img"></div>
+                        <div class="info">
+                            <div class="nomeB" id="nomeB"></div>
+                            <div class="classe" id="classe"></div>
+                            <div class="origem" id="origem"></div>
+                        </div>
+                    </div>
+                    <div class="texto" id="texto"></div>
                 </div>
             </div>
         </div>
@@ -66,9 +74,29 @@
 </html>
 <script src="./js/informacoes.js"></script>
 <script>
-    function pesquisarBesta(){
-        var bestaSelecionada = document.getElementById("buscar_besta").value;
 
-        console.log("Besta pesquisada: " + bestaSelecionada);
+    let besta = "";
+
+function exibirTexto() {
+    
+    besta = document.getElementById("ipt_pesquisa").value;
+
+    if (bestaMap[besta]) {
+        console.log(`Besta selecionada: ${besta}`);
+
+        img.innerHTML = `<img class="img" src="${bestaMap[besta].img}" alt="${besta}">`;
+        nomeB.innerHTML = `<b>Nome:</b> ${besta}`;
+        classe.innerHTML = `<b>Classe:</b> ${bestaMap[besta].classe}`;
+        origem.innerHTML = `<b>Origem:</b> ${bestaMap[besta].origem}`;
+        texto.innerHTML = `${bestaMap[besta].sobre}`;
+
+    } else {
+
+        img.innerHTML = "";
+        nomeB.innerHTML = "";
+        classe.innerHTML = "";
+        origem.innerHTML = "";
+        texto.innerHTML = "";
     }
+}
 </script>

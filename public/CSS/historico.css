@@ -128,6 +128,24 @@ a {
     justify-content: space-around;
     justify-items: center;
     margin-top: -30px;
+
+
+    overflow-y: auto;        
+    overflow-x: hidden;      
+}
+
+.exibirHistorico::-webkit-scrollbar {
+    width: 8px;                
+}
+
+.exibirHistorico::-webkit-scrollbar-track {
+    background: #e6ccb2;
+    border-radius: 4px;
+}
+
+.exibirHistorico::-webkit-scrollbar-thumb {
+    background: #7f5539;
+    border-radius: 4px;
 }
 
 .data,
@@ -136,9 +154,4 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.exibirHistorico::-webkit-scrollbar {
-    overflow-x: hidden;
-    overflow-y: auto;
 }
