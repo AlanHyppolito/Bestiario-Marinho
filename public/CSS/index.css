@@ -211,6 +211,43 @@ a{
 
 /* -- cat-map ------------------------------------------------------------------- */
 
+.card2{
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card2-linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-class{
+    display: flex;
+    height: 270px;
+    width: 200px;
+    background: radial-gradient(rgb(0, 0, 122), black);
+    border: 1px solid;
+    border-color: rgb(43, 43, 43);
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img{
+    display: flex;
+    width: 150px;
+    margin-top: 40px;    
+}
+
+.class{
+    display: flex;
+    font-size: 40px;
+}
 
 .cat-map {
     display: flex;
@@ -221,8 +258,10 @@ a{
 
 .mapa{
     width: 1000px;
-    
-
+    margin-top: 40px;
+    border-radius: 35px;
+    border: 1.5px solid;
+    border-color: rgb(43, 43, 43);
 }
 
 /* -- footer ------------------------------------------------------------------------ */
