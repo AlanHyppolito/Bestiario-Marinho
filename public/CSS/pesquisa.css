@@ -61,3 +61,39 @@ a {
     text-decoration: none;
     color: white;
 }
+
+/* -- card-pesquisa ------------------------------------------------- */
+.card-fundo-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.fundo-pesquisa{
+    background-image: url(../assets/IMG/papel.png);
+    background-repeat: 0;
+    background-size: cover;
+    background-clip: inherit;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    width: 840px;
+    height: 1150px;
+    color: rgba(50, 32, 24, 0.9);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+    margin-top: -80px;
+}
+
+.card-pesquisa {
+    width: 600px;
+    height: 800px;
+    margin-top: 140px;
+    margin-left: 40px;
+}
+
+.pesquisa{
+    
+}

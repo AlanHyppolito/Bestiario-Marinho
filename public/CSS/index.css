@@ -29,12 +29,12 @@ body img {
 
     font-size: 50px;
     height: 250px;
-    margin-left: -142px;
     margin-bottom: 120px;
 }
 
 .img-logo {
     width: 450px;
+    margin-left: -142px;
 }
 
 .ata {
@@ -192,6 +192,12 @@ a{
     margin-top: 50px;
 }
 
+.imgb{
+    border-radius: 20px;
+    width: 350px;
+    height: 400px;
+}
+
 .nome {
     font-size: 55px;
     color: rgba(161, 41, 213, 0.734);
@@ -225,7 +231,7 @@ a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .txt-footer{
@@ -233,10 +239,10 @@ a{
     flex-direction: column;
     align-items: center;
     font-size: 45px;
-    margin-left: 500px;
+    margin-left: 650px;
 }
 
 .github{
     width: 90px;
-    margin-left: 700px;
+    margin-left: 750px;
 }

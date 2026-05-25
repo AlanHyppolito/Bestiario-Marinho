@@ -24,11 +24,51 @@
         </div>
         <div class="exit"><a onclick="limparSessao()">Sair</a></div>
     </div>
+    <div class="card-fundo-pesquisa">
+        <div class="fundo-pesquisa">
+            <div class="card-pesquisa">
+                <div class="pesquisa">
+                    <input type="text" id="" list="lista-criaturas" placeholder="Pesquisa">
+                    <datalist id="lista-criaturas">
+                        <option value="Kraken">Kraken</option>
+                        <option value="Jörmungandr">Jörmungandr</option>
+                        <option value="Sereias">Sereias</option>
+                        <option value="Cila">Cila</option>
+                        <option value="Ryūjin">Ryūjin</option>
+                        <option value="Leviatã">Leviatã</option>
+                        <option value="Aspidochelone">Aspidochelone</option>
+                        <option value="Cthulhu">Cthulhu</option>
+                        <option value="Godzilla">Godzilla</option>
+                        <option value="Megalodon">Megalodon</option>
+                        <option value="Kappa">Kappa</option>
+                        <option value="Hipocampo">Hipocampo</option>
+                        <option value="Tiamat">Tiamat</option>
+                        <option value="Hydra">Hydra</option>
+                        <option value="Apep">Apep</option>
+                        <option value="Charybdis">Charybdis</option>
+                        <option value="Umibōzu">Umibōzu</option>
+                        <option value="Akkorokamui">Akkorokamui</option>
+                        <option value="Kelpie">Kelpie</option>
+                        <option value="Makara">Makara</option>
+                        <option value="Cetus">Cetus</option>
+                        <option value="Nammu">Nammu</option>
+                        <option value="Zaratan">Zaratan</option>
+                    </datalist>
+                </div>
+                <div class="texto">
 
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
 <script src="./js/informacoes.js"></script>
 <script>
+    function pesquisarBesta(){
+        var bestaSelecionada = document.getElementById("buscar_besta").value;
 
+        console.log("Besta pesquisada: " + bestaSelecionada);
+    }
 </script>
