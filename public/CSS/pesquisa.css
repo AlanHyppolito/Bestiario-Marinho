@@ -70,7 +70,7 @@ a {
     flex-direction: column;
 }
 
-.fundo-pesquisa{
+.fundo-pesquisa {
     background-image: url(../assets/IMG/papel.png);
     background-repeat: 0;
     background-size: cover;
@@ -101,7 +101,7 @@ a {
 
 
 .card-pesquisa::-webkit-scrollbar {
-    width: 8px;                
+    width: 8px;
 }
 
 .card-pesquisa::-webkit-scrollbar-track {
@@ -114,12 +114,12 @@ a {
     border-radius: 4px;
 }
 
-.pesquisa{
+.pesquisa {
     margin-top: 30px;
     margin-bottom: 70px;
 }
 
-input{
+input {
     width: 300px;
     padding-top: 10px;
     background: transparent;
@@ -127,41 +127,43 @@ input{
     border-bottom: 2px solid rgba(50, 32, 24, 0.9);
     outline: none;
     color: rgba(50, 32, 24, 0.9);
-    font-size: 30px;
+    font-size: 40px;
+    font-family: 'Jim Nightshade', cursive;
     text-align: center;
 }
 
 input::placeholder {
-    color:  rgba(50, 32, 24, 0.9);
+    color: rgba(50, 32, 24, 0.9);
+    font-family: 'Jim Nightshade', cursive;
 }
 
-.resp{
+.resp {
     display: flex;
     flex-direction: column;
 }
 
-.inicio{
+.inicio {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-size: 35px;
 }
 
-.img{
+.img {
     width: 250px;
     height: 250px;
     border-radius: 15px;
     margin-bottom: 20px;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     color: rgba(50, 32, 24, 0.9);
     margin-top: 10px;
 }
 
-.texto{
+.texto {
     font-size: 40px;
     color: rgba(50, 32, 24, 0.9);
 }
