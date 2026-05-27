@@ -20,7 +20,7 @@ let bestaMap = {
     "Sereia": {
         "id": 3,
         "nome": "Sereia",
-        "img": "./assets/bestaIMG/sereia1.jpg",
+        "img": "./assets/bestaIMG/sereia.jpg",
         "classe": "Lendário",
         "origem": "Mitologia Grega",
         "sobre": "Nas antigas lendas gregas, as sereias habitavam ilhas rochosas cercadas por mares perigosos e nevoeiros constantes. Sua aparência variava entre mulher e criatura marinha, sendo descritas como seres de beleza sobrenatural capazes de atrair qualquer viajante que cruzasse seus caminhos.\n\nO maior poder das sereias estava em suas vozes hipnotizantes. Marinheiros relatavam ouvir canções suaves vindas do oceano durante a noite, perdendo completamente a noção do perigo ao seguir o som misterioso. Muitos navios acabavam destruídos contra rochedos ocultos enquanto suas tripulações desapareciam entre as ondas.\n\nCom o passar do tempo, as sereias se tornaram símbolos do fascínio e do perigo escondidos no mar. Suas histórias atravessaram séculos, permanecendo presentes em lendas marítimas, contos antigos e narrativas sobre o desconhecido."
@@ -74,7 +74,7 @@ let bestaMap = {
     "Godzilla": {
         "id": 9,
         "nome": "Godzilla",
-        "img": "./assets/bestaIMG/",
+        "img": "./assets/bestaIMG/Godzila.png",
         "classe": "Colossal",
         "origem": "Kaiju Japonês",
         "sobre": "Godzilla surgiu das profundezas do oceano como consequência dos testes nucleares realizados após a guerra. Despertado pela radiação, o gigantesco kaiju tornou-se uma força destrutiva imparável, capaz de devastar cidades inteiras com sua presença.\n\nSeu rugido aterrorizante ecoava entre prédios em ruínas enquanto ondas gigantes atingiam a costa. Em diversas histórias, Godzilla não era apenas um monstro, mas também uma representação do medo humano diante das consequências da destruição causada pela própria humanidade.\n\nMesmo sendo visto como uma criatura devastadora, algumas lendas modernas retratam Godzilla como um guardião do equilíbrio natural. Entre destruição e proteção, o rei dos monstros permanece como uma das criaturas gigantes mais icônicas da cultura japonesa."
@@ -83,7 +83,7 @@ let bestaMap = {
     "Megalodon": {
         "id": 10,
         "nome": "Megalodon",
-        "img": "./assets/bestaIMG/",
+        "img": "./assets/bestaIMG/Megalodon.png",
         "classe": "Abissal",
         "origem": "Pré-Histórico",
         "sobre": "O Megalodon foi o maior tubarão predador que já existiu nos oceanos da Terra. Com mandíbulas gigantescas e dentes do tamanho de mãos humanas, dominava os mares pré-históricos como uma força impossível de enfrentar.\n\nMesmo após ser considerado extinto pela ciência, diversas histórias modernas afirmam que criaturas semelhantes ainda habitam regiões profundas e inexploradas do oceano. Relatos de embarcações desaparecidas e sombras gigantes sob as águas alimentaram ainda mais essas teorias.\n\nCombinando fatos reais e lendas contemporâneas, o Megalodon se transformou em uma das criaturas marinhas mais assustadoras já imaginadas. Sua presença simboliza o medo do que ainda pode existir escondido nas profundezas do planeta."
@@ -195,14 +195,5 @@ let bestaMap = {
         "classe": "Ancestral",
         "origem": "Mitologia Suméria",
         "sobre": "Nammu era reverenciada nas tabuletas da Suméria pré-babilônica como a deusa ancestral e a mãe primordial que deu à luz o próprio universo. Ela personificava o vasto oceano cósmico de água doce que existia antes de qualquer separação entre o céu e a terra.\n\nSegundo os mitos de criação, foi nas águas profundas e férteis de Nammu que a vida e as primeiras divindades foram moldadas. Ela era a matriz silenciosa do cosmos, uma força ancestral puramente geradora que sustentava os alicerces invisíveis do mundo conhecido a partir do abismo aquático.\n\nEmbora o culto a Nammu tenha empalidecido com o surgimento de deuses guerreiros em eras posteriores, sua importância como a origem de tudo permaneceu intacta. Ela representa o oceano ancestral não como um lugar de terror, mas como o útero eterno de onde toda a existência fluiu."
-    },
-
-    "Zaratan": {
-        "id": 23,
-        "nome": "Zaratan",
-        "img": "./assets/bestaIMG/",
-        "classe": "Colossal",
-        "origem": "Folclore Árabe",
-        "sobre": "O Zaratan era descrito nos relatos de navegadores medievais como um colosso marinho de dimensões tão absurdas que rivalizava com as maiores ilhas do planeta. Seu casco ou carapaça colossal acumulava terra, árvores e recifes ao longo de séculos de imobilidade na superfície do oceano.\n\nMarinheiros cansados de longas viagens frequentemente aportavam em suas costas texturizadas, montando acampamentos inteiros sobre o colosso adormecido. O desastre acontecia quando a criatura, incomodada pelo calor dos fogos ou decidindo mover-se após eras, submergia pesadamente, criando um turbilhão que engolia frotas inteiras.\n\nA imagem do Zaratan atravessou os séculos como o ápice dos monstros colossos que desafiam a geografia do mundo. Ele personificava a imensidão assustadora do oceano, onde a própria terra firme sob os pés dos homens poderia se revelar um titã adormecido das profundezas."
     }
 }
