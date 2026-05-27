@@ -72,6 +72,12 @@ INSERT INTO bestas (nome, classe) VALUES
 ('Charybdis', 'Abissal'),
 ('Umibōzu', 'Abissal'),
 ('Akkorokamui', 'Abissal'),
+('Kelpie', 'Guardião'),
+('Makara', 'Guardião'),
+('Cetua', 'Ancestral'),
+('Nammu', 'Ancestral'),
+('Zaratan', 'Colossal');
+
 
 -- --------------------------------------------------------------------------
 
